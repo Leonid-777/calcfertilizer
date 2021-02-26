@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalcFertilizer|Калькулятор минеральных удобрений</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>CalcFertilizer</h1>
+        <h2>Рассчитайте количество удобрений легко и быстро!</h2>
+    </header>
+    <section class="descr">
+        <h2>Описание</h2>
+        <p class="descr_text">
+            Данный сайт является частью школьного проекта по информатике, и включает в себя веб-приложение для расчёта
+            количества минеральных удобрений онлайн. Сайт состоит из трёх частей: в первой части находится рписание нашего проекта,
+            во второй - краткая памятка про удобрения, в которой подробно описываются разновидности минеральных удобрений,
+            правила по их пременению, а также указаны лучшие отечественные поизводители. Наконец, в третьей части находится сам калькулятор. 
+            С его помощью вы можете рассчитать нужное количество 10 видов минеральных удобрений в зависимости от требуемого 
+            количества действующего элемента в почве. А если у вас есть предложения пло улучшению нашего проекта, то в конце 
+            страницы находится кнопка обратной связи.
+        </p>
+    </section>
+    <section class="about">
+        <h2>Удобрения</h2>
+        <p class="about_text">
+            Минеральные удобрения отличаются от органических большим содержанием питательных веществ. По составу происходит их деление на сложные и простые. Простые минеральные удобрения имеют один питательный элемент, сложные – несколько.
+            <br>Азотные удобрения содержат один важный для питания растений элемент – азот. Этот вид удобрений влияет на урожайность всех культур: правильное применение азота способствует резкому увеличению качества и количества плодов, а его нехватка – снижению.
+            Каждый садовод должен знать, что бесконтрольное использование азота в количествах, превышающих норму, приводит к загрязнению окружающей среды путем вымывания из почвы и попадания в грунтовые воды и реки, а также оказывает отрицательное влияние на здоровье человека и животных, если находится в избытке в почве или в употребляемых ими растениях и плодах.
+            <br>Калийные удобрения нужны растениям для лучшего усвоения углекислоты из воздуха и повышения устойчивости растений к засухе, морозам, болезням и вредителям. Калийные удобрения в виде раствора пригодны для любых почв. Они остаются в зоне внесения, поэтому заделку производят глубоко в землю. Бывает калий хлористый, сернокислый и калийная соль.
+            <img src="./assets/img/fertilizer.jpg" alt="Удобрения" class="fert">
+            <br>Фосфорные удобрения, где содержится второй главный минеральный элемент – фосфор, оказывают на растения положительное влияние следующим образом: ускоряют процесс появления плодов, увеличивают количество и качество урожая, делают растения более устойчивыми при засухе и морозах.
+            Фосфорные удобрения следует вносить глубже в почву, ближе к зоне корневой системы, так как состояние фосфора в почве – малоподвижное.
+            <h3>Лидирующие производители удобрений</h3>
+            <div class="wrap_img">
+                <a href="https://www.acron.ru/"><img src="./assets/img/acron.jpg" alt="Акрон"></a>
+                <a href="https://www.phosagro.ru/"><img src="./assets/img/fosargo.jpg" alt="Фосагро"></a>
+            </div>
+            <div class="wrap_img">
+                <a href="https://betaren.ru/"><img src="./assets/img/sholagro.jpg" alt="Щёлково агрохим"></a>
+                <a href="http://www.sds-azot.ru/"><img src="./assets/img/sdsazot.jpg" alt="СДС Азот"></a>
+            </div>
+        </p>
+    </section>
+    <section class="calc">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="readln">
+                            <h2>Азотные удобрения</h2>
+                            <select name="place" id="n-cultor">
+                                <option value="0">Выберете культуру</option>
+                                <option value="3.3">Озимая пшеница</option>
+                                <option value="2.73">Озимый ячмень</option>
+                                <option value="3.13">Овёс</option>
+                                <option value="3.36">Рис</option>
+                                <option value="2.81">Кукуруза (зерно)</option>
+                                <option value="6.03">Горох (зерно)</option>
+                                <option value="3.69">Фасоль</option>
+                                <option value="7.45">Соя</option>
+                                <option value="5.43">Зернобобовые (зерно)</option>
+                                <option value="5.27">Подсолнечник (семена)</option>
+                                <option value="5.19">Клещевина</option>
+                                <option value="4.11">Рапс (семена)</option>
+                                <option value="5.47">Арахис</option>
+                                <option value="4.4">Табак</option>
+                                <option value="0.49">Сахарная свёкла (корнеплоды)</option>
+                                <option value="3.91">Сахарная свёкла (семена)</option>
+                                <option value="0.57">Картофель</option>
+                                <option value="0.50">Бахчевые культуры</option>
+                                <option value="0.32">Морковь</option>
+                                <option value="0.17">Огурцы</option>
+                                <option value="0.37">Томаты, репчатый лук</option>
+                                <option value="0.32">Кормовые корнеплоды</option>
+                                <option value="0.37">Кукуруза (зелёная масса)</option>
+                                <option value="0.3">Подсолнечник (зелёная масса)</option>
+                                <option value="0.45">Злакобобовая смесь (зелёная масса)</option>
+                                <option value="0.71">Виноградник</option>
+                                <option value="2.5">Орехоплодные (орехи)</option>
+                                <option value="0.5">Ягодники (ягоды)</option>
+                                <option value="0.58">Сад (плоды)</option>
+                            </select>
+                            <select name="place" id="n-soil">
+                                <option value="0">Выберете тип почвы</option>
+                                <option value="5">Дерново-подзолистая</option>
+                                <option value="7">Лесостепная</option>
+                                <option value="10">Выщелоченный чернозём</option>
+                                <option value="12">Чернозём</option>
+                                <option value="6">Каштановая</option>
+                                <option value="4">Серозёмы</option>
+                                <option value="8">Краснозёмы</option>
+                            </select>
+                            <select name="place" id="nitrogen_select">
+                                <option value="0">вид удобрения</option>
+                                <option value="33">Аммиачная селитра</option>
+                                <option value="21">Сульфат аммония</option>
+                                <option value="46">Карбамид (мочевина)</option>
+                                <option value="20">Аммиачная вода</option>
+                                <option value="32">Карбид-аммиачная смесь (кас)</option>
+                            </select>
+                            <div class="account">
+                                <div class="container">
+                                    <label for="in">планируемая урожайность (ц/га)<br><input type="text" name="" id=""></label>
+                                    <button class="compute">Рассчитать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="output">
+                            Количество удобрения в центерах на гектар
+                          </div>
+                         <h3>Азотные удобрения</h3>
+                          <div class="result" id="nitrogen">12</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="readln">
+                            <h2>Фосфорные удобрения</h2>
+                            <select name="place" id="ph-cultor">
+                                <option value="0">Выберете культуру</option>
+                                <option value="1.04">Озимая пшеница</option>
+                                <option value="1.04">Озимый ячмень</option>
+                                <option value="1.25">Овёс</option>
+                                <option value="1.48">Рис</option>
+                                <option value="0.91">Кукуруза (зерно)</option>
+                                <option value="1.49">Горох (зерно)</option>
+                                <option value="1.38">Фасоль</option>
+                                <option value="1.89">Соя</option>
+                                <option value="1.44">Зернобобовые (зерно)</option>
+                                <option value="1.96">Подсолнечник (семена)</option>
+                                <option value="1.36">Клещевина</option>
+                                <option value="1.93">Рапс (семена)</option>
+                                <option value="1.03">Арахис</option>
+                                <option value="1.67">Табак</option>
+                                <option value="0.16">Сахарная свёкла (корнеплоды)</option>
+                                <option value="1.7">Сахарная свёкла (семена)</option>
+                                <option value="0.17">Картофель</option>
+                                <option value="0.06">Бахчевые культуры</option>
+                                <option value="0.1">Морковь</option>
+                                <option value="0.14">Огурцы</option>
+                                <option value="0.12">Томаты, репчатый лук</option>
+                                <option value="0.15">Кормовые корнеплоды</option>
+                                <option value="0.11">Кукуруза (зелёная масса)</option>
+                                <option value="0.08">Подсолнечник (зелёная масса)</option>
+                                <option value="0.12">Злакобобовая смесь (зелёная масса)</option>
+                                <option value="0.33">Виноградник</option>
+                                <option value="0.4">Орехоплодные (орехи)</option>
+                                <option value="0.16">Ягодники (ягоды)</option>
+                                <option value="0.24">Сад (плоды)</option>
+                            </select>
+                            <select name="place" id="ph-soil">
+                                <option value="0">Выберете тип почвы</option>
+                                <option value="7">Дерново-подзолистая</option>
+                                <option value="8">Лесостепная</option>
+                                <option value="6.2">Выщелоченный чернозём</option>
+                                <option value="8">Чернозём</option>
+                                <option value="8.1">Каштановая</option>
+                                <option value="5.2">Серозёмы</option>
+                                <option value="6">Краснозёмы</option>
+                            </select>
+                            <select name="place" id="phosphorus_select">
+                                <option value="0">вид удобрения</option>
+                                <option value="26">Суперфосфат простой</option>
+                                <option value="30">Костяная мука</option>
+                                <option value="44">Суперфосфат двойной</option>
+                            </select>
+                            <div class="account">
+                                <div class="container">
+                                    <label for="in">планируемая урожайность (ц/га)<br><input type="text" name="" id=""></label>
+                                    <button class="compute">Рассчитать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <h3>Фосфорные удобрения</h3>
+                        <div class="result" id="phosphorus">9</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="readln">
+                            <h2>Калийные удобрения</h2>
+                            <select name="place" id="k-cultor">
+                                <option value="0">Выберете культуру</option>
+                                <option value="2.14">Озимая пшеница</option>
+                                <option value="2.36">Озимый ячмень</option>
+                                <option value="2.69">Овёс</option>
+                                <option value="3.28">Рис</option>
+                                <option value="2.36">Кукуруза (зерно)</option>
+                                <option value="2.72">Горох (зерно)</option>
+                                <option value="1.72">Фасоль</option>
+                                <option value="2.69">Соя</option>
+                                <option value="1.84">Зернобобовые (зерно)</option>
+                                <option value="10.06">Подсолнечник (семена)</option>
+                                <option value="2.61">Клещевина</option>
+                                <option value="2.7">Рапс (семена)</option>
+                                <option value="3.1">Арахис</option>
+                                <option value="5.41">Табак</option>
+                                <option value="0.63">Сахарная свёкла (корнеплоды)</option>
+                                <option value="5.21">Сахарная свёкла (семена)</option>
+                                <option value="0.76">Картофель</option>
+                                <option value="0.58">Бахчевые культуры</option>
+                                <option value="0.5">Морковь</option>
+                                <option value="0.26">Огурцы</option>
+                                <option value="0.4">Томаты, репчатый лук</option>
+                                <option value="0.57">Кормовые корнеплоды</option>
+                                <option value="0.35">Кукуруза (зелёная масса)</option>
+                                <option value="0.6">Подсолнечник (зелёная масса)</option>
+                                <option value="0.4">Злакобобовая смесь (зелёная масса)</option>
+                                <option value="0.9">Виноградник</option>
+                                <option value="0.52">Орехоплодные (орехи)</option>
+                                <option value="0.52">Ягодники (ягоды)</option>
+                                <option value="0.58">Сад (плоды)</option>
+                            </select>
+                            <select name="place" id="k-soil">
+                                <option value="0">Выберете тип почвы</option>
+                                <option value="10">Дерново-подзолистая</option>
+                                <option value="11">Лесостепная</option>
+                                <option value="9">Выщелоченный чернозём</option>
+                                <option value="12">Чернозём</option>
+                                <option value="3.9">Каштановая</option>
+                                <option value="5">Серозёмы</option>
+                                <option value="6">Краснозёмы</option>
+                            </select>
+                            <select name="place" id="potassium_select">
+                                <option value="0">вид удобрения</option>
+                                <option value="55">Хлористый калий (хлорид калия)</option>
+                                <option value="45">Сернокислый калий (сульфат калия)</option>
+                            </select>
+                            <div class="account">
+                                <div class="container">
+                                    <label for="in">планируемая урожайность (ц/га)<br><input type="text" name="" id=""></label>
+                                    <button class="compute">Рассчитать</button>
+                                </div>
+                            </div>
+                        </div> 
+                    </td>
+                    <td>
+                        <h3>Калийные удобрения</h3>
+                        <div class="result" id="potassium">3</div>    
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="mail">
+        <div class="mailtext">У вас есть предложения по улучшению <br> 
+            нашего продукта? Напишите нам!</div>
+            <a href="#"><button id="butclick">Связаться</button></a>
+    </section>
+    <section class="subcalc">
+        <h2>Калькулятор для малых расчётов</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Азотные удобрения</h3>
+                        <select name="place" id="ns">
+                            <option value="0">вид удобрения</option>
+                            <option value="33">Аммиачная селитра</option>
+                            <option value="21">Сульфат аммония</option>
+                            <option value="46">Карбамид (мочевина)</option>
+                            <option value="20">Аммиачная вода</option>
+                            <option value="32">Карбид-аммиачная смесь (кас)</option>
+                        </select>
+                        <label for=""><br>введите нужное кол-о элемента на 1 кв.м<br>
+                            <input type="text" id="ni">
+                        </label>
+                        <button class="nBtn">Рассчитать</button>
+                    </td>
+                    <td>
+                        <h3 id="nr">Количество удобрений в гр/м3</h3>
+                        <div class="nitr"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Фосфорные удобрения</h3>
+                        <select name="place" id="phs">
+                            <option value="0">вид удобрения</option>
+                            <option value="26">Суперфосфат простой</option>
+                            <option value="30">Костяная мука</option>
+                            <option value="44">Суперфосфат двойной</option>
+                        </select>
+                        <label for=""><br>введите нужное кол-о элемента на 1 кв.м<br>
+                            <input type="text" id="phi">
+                        </label>
+                        <button class="phBtn">Рассчитать</button>
+                    </td>
+                    <td>
+                        <div class="phsu"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Калийные удобрения</h3>
+                        <select name="place" id="ks">
+                            <option value="0">вид удобрения</option>
+                            <option value="55">Хлористый калий (хлорид калия)</option>
+                            <option value="45">Сернокислый калий (сульфат калия)</option>
+                        </select>
+                        <label for=""><br>введите нужное кол-о элемента на 1 кв.м<br>
+                            <input type="text" id="ki">
+                        </label>
+                        <button class="kBtn">Рассчитать</button> 
+                    </td>
+                    <td>
+                        <div class="ksi"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="fert">
+        <p>
+            Ниже представлена таблица выноса (потребности) азота, фосфора и калия для 
+            основных сельскохозяйственных культур в граммах на метр кубический<br>
+            (Представлены СРЕДНИЕ значения)
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Растение</th><th>N</th><th>P</th><th>K</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Картофель</td><td>7</td><td>7</td><td>7,5</td>
+                </tr>
+                <tr>
+                    <td>Зерновые</td><td>7,5</td><td>7,6</td><td>7</td>
+                </tr>
+                <tr>
+                    <td>Томаты</td><td>7,5</td><td>7</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>Свёкла кормовая</td><td>7</td><td>8</td><td>7</td>
+                </tr>
+                <tr>
+                    <td>Огурцы</td><td>5,5</td><td>6</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>Капуста белокочанная</td><td>5,5</td><td>5</td><td>4</td>
+                </tr>
+                <tr>
+                    <td>Морковь</td><td>5,5</td><td>5</td><td>5,5</td>
+                </tr>
+                <tr>
+                    <td>Лук репчатый</td><td>6,5</td><td>7</td><td>7,5</td>
+                </tr>
+                <tr>
+                    <td>Подсолнечник (семена)</td><td>3,5</td><td>3,5</td><td>1,2</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <script src="assets/js/script.js"></script>
+    <footer>
+        <span>CalcFertilizer | Калькулятор минеральных удобрений &copy;</span>
+    </footer>
+</body>
+</html>

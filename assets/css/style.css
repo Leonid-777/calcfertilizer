@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto Light';
+    color:   #072909;
+    font-size: 20px;
+}
+header {
+    background-image: linear-gradient(to top,  #dbc818 0%, #d1cf56 100%);
+    width: 100%;
+    height: 180px;
+    padding: 20px 0 120px 0;
+    z-index: 2;
+}
+
+h1, h2 {
+    font-family: 'Roboto Black';
+    color:  #072909;
+}
+header h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Roboto Black';
+    margin-top: 12px;
+} header h2 {   
+    font-size: 20px;
+    font-family: 'Roboto Black';
+    margin-top: 12px;
+    text-align: center;
+}
+.descr {
+    width: 100%;
+    line-height: 1.5em;
+    background-color:#faebd7;
+    padding: 20px;
+    padding-bottom: 72px;
+}
+
+.about {
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color:#eee3d5;
+    line-height: 1.5em;
+}
+.about p, .descr p {
+    width: 80%;
+    margin: 0 auto;
+}
+.about h2, .descr h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.about h3 {
+    margin: 0 auto;
+    margin-bottom: 72px;
+    margin-top: 20px;
+    text-align: center;
+}
+.about .wrap_img {
+    margin: 0 auto;
+    margin-bottom: 72px;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+.about img {
+    display: block;
+    width: 300px;
+    margin: 10px 50px 10px 50px;
+}
+.about .fert {
+    display: block;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.calc {
+    margin: 0 auto;
+    width: 100%;
+    background-color: #f7f7af;
+    padding: 10px;
+}
+.calc .readln h2 {
+    padding: 10px;
+}
+.calc input[type="text"] {
+    height: 33px;
+    width: 300px;
+    text-align: center;
+    outline: none;
+    background-color: #9eeec7;
+    color:  #072909;
+    padding: 3px 5px 3px 5px;
+    border: 1px solid  #45b14e;
+    font-size: 20px;
+    margin: 10px 10px 0 0;
+    border-radius: 12px;
+}
+.calc input[type="text"]:focus {
+    border: 2px solid  #7de285;
+    background-color: #acebcc;
+}
+.calc .container {
+    margin: 12px 0 12px 0;
+}
+
+.compute {
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    background-color: rgba(69, 177, 78, 0.8);
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.compute:hover {
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    color: rgba(69, 177, 78, 0.8);
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-size: 20px;
+}
+select {
+    width: 230px;
+    height: 35px;
+    padding-left: 10px;
+    background-color: rgba(69, 177, 78, 0.8);
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+#butclick {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-75px);
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(69, 177, 78);
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 20px;
+}
+#butclick:hover {
+    color: rgb(69, 177, 78);
+    background-color: #ffffff;
+}
+.result {
+    font-family: "Roboto Black";
+    font-size: 30px;
+}
+.output {
+    margin-bottom: 40px;
+}
+.calc table {
+    width: 80%;
+    margin: 0 auto;
+}
+.mail {
+    width: 100%;
+    padding: 0;
+    height: 120px;
+    background-color:  #f7f7af;
+    margin: 0 auto;
+}
+.mail .mailtext {
+    text-align: center;
+}
+footer {
+    padding: 0 30% 0 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    background-image: linear-gradient(to top,  #dbc818 0%, #d1cf56 100%);
+}
+footer span, footer img {
+    margin: 0 auto;
+    margin-top: 7px;
+}
+.subcalc {
+    width: 100%;
+    background-color: #fffccb;
+    padding: 30px 0 30px 0;
+}
+.subcalc h2 {
+    text-align: center;
+}
+.subcalc table {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+.subcalc table td {
+    max-width: 300px;
+    margin: 5px;
+}
+.subcalc input[type="text"] {
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    outline: none;
+    background-color: #a4fab2;
+    color:  #072909;
+    padding: 3px 5px 3px 5px;
+    border: 1px solid  #2abd36;
+    font-size: 18px;
+    margin: 10px 10px 0 0;
+    border-radius: 12px;
+}
+.subcalc button {
+    display: block;
+    border: none;
+    margin-top: 10px;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    background-color: rgba(69, 177, 78, 0.8);
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.subcalc button:hover {
+    color: rgba(69, 177, 78, 0.8);
+    background-color: #ffffff;
+}
+.nitr, .phsu, .ksi {
+    width: 250px;
+    text-align: center;
+    font-family: 'Roboto Black';
+    height: 150px;
+    border: 1px solid  #2abd36;
+    font-size: 40px;
+}
+.fert {
+    width: 100%;
+    background-color: #dde4ca;
+    padding: 30px 0 30px 0;
+}
+.fert table {
+    margin: 0 auto;
+    padding: 0;
+    border: 2px solid #000000;
+}
+.fert table td, .fert table th {
+    width: 120px;
+    margin: 0 auto;
+    height: 30px;
+    text-align: center;
+    border: 2px solid #000000;
+}
+.fert p {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+@media (max-device-width: 900px) {
+    * {
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .about .wrap_img {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+    }
+    select {
+        width: 130px;
+        height: 24px;
+        padding-left: 3px;
+        background-color: rgba(69, 177, 78, 0.8);
+        color: #fff;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    select option {
+        width: 130px;
+        font-size: 16px;
+    }
+    .calc {
+        margin: 0;
+        padding: 0;
+    }
+    .calc table {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .calc input[type="text"] {
+        height: 33px;
+        width: 150px;
+        text-align: center;
+        outline: none;
+        background-color: #9eeec7;
+        color:  #072909;
+        padding: 3px 5px 3px 5px;
+        border: 1px solid  #45b14e;
+        font-size: 20px;
+        margin: 10px 10px 0 0;
+        border-radius: 12px;
+    }
+    .calc input[type="text"]:focus {
+        border: 2px solid  #7de285;
+        background-color: #acebcc;
+    }
+    .mail {
+        padding-bottom: 10px;
+    }
+    .compute {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .subcalc table {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 0 10px 0 10px;
+    }
+    .nitr, .phsu, .ksi {
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .subcalc {
+        font-size: 12px;
+    }
+    .subcalc input[type="text"] {
+        width: 150px;
+    }
+    .fert table {
+        max-width: 90px;
+        margin: 0 auto;
+        font-size: 18px;
+    }
+}
